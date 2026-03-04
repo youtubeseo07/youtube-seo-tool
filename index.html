@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube SEO Tool</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#ff4e50,#1e90ff);
+color:white;
+text-align:center;
+padding:20px;
+}
+.container{
+background:white;
+color:black;
+padding:20px;
+border-radius:15px;
+max-width:500px;
+margin:auto;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+button{
+background:#ff0000;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+button:hover{
+background:#cc0000;
+}
+.result{
+margin-top:15px;
+padding:10px;
+background:#f1f1f1;
+border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<h1>🔥 YouTube SEO Tool</h1>
+
+<div class="container">
+<h3>Enter Your Video Keyword</h3>
+<input type="text" id="keyword" placeholder="Enter main keyword">
+
+<button onclick="generate()">Generate SEO</button>
+
+<div class="result" id="output"></div>
+</div>
+
+<script>
+function generate(){
+let keyword=document.getElementById("keyword").value;
+
+if(keyword==""){
+alert("Please enter a keyword");
+return;
+}
+
+let title=keyword+" | Full Guide 2026 | Best Tips & Tricks";
+let description="In this video, we explain "+keyword+" in detail. Watch till the end for complete information and useful tips. Don't forget to like, share and subscribe.";
+let tags=keyword+", "+keyword+" tutorial, "+keyword+" 2026, "+keyword+" tips, "+keyword+" guide, youtube seo, trending topic";
+
+document.getElementById("output").innerHTML=
+"<b>SEO Title:</b><br>"+title+
+"<br><br><b>Description:</b><br>"+description+
+"<br><br><b>Tags:</b><br>"+tags;
+}
+</script>
+
+</body>
+</html>
